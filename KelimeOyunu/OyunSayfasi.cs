@@ -620,10 +620,26 @@ namespace KelimeOyunu
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            timer1.Interval = 1000;
+            
+
+            //timer1.Interval = 1000;
 
             saniye = saniye - 1;
             saniyeLbl.Text = Convert.ToString(saniye + " saniye");
+            if (dakikaLbl.Text == "0 dk" && saniyeLbl.Text== "0 saniye")
+            {
+                timer1.Stop();
+                dakikaLbl.Text = "00";
+                saniyeLbl.Text = "00";
+                dakika = 1;
+                saniye = 0;
+
+                // 4dk lik süre bitince sonuc sayfasina gonder
+                SonucSayfasi sonucsf = new SonucSayfasi();
+                sonucsf.Show();
+                Close();
+
+            }
             dakikaLbl.Text = Convert.ToString((dakika - 1) + " dk");
             if (saniye == 0)
             {
@@ -632,17 +648,24 @@ namespace KelimeOyunu
                 saniye = 60;
             }
 
-            if (dakikaLbl.Text == "-1")
-            {
-                timer1.Stop();
-                dakikaLbl.Text = "00";
-                saniyeLbl.Text = "00";                
-            }
+            //if (dakikaLbl.Text == "-1")
+            //{
+            //    MessageBox.Show("girdi");
+            //    timer1.Stop();
+            //    dakikaLbl.Text = "00";
+            //    saniyeLbl.Text = "00";
+            //    SonucSayfasi sonucsf = new SonucSayfasi();
+            //    sonucsf.Show();
+            //    Close();
+            //}
+
+
+
         }
 
         private void timer2_Tick(object sender, EventArgs e)
         {
-            timer2.Interval = 1000;
+            //timer2.Interval = 1000;
 
             saniye2 = saniye2 - 1;
             saniye2Lbl.Text = Convert.ToString(saniye2);

@@ -42,7 +42,7 @@ namespace KelimeOyunu
             this.baslikLbl.AutoSize = true;
             this.baslikLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 26F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.baslikLbl.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.baslikLbl.Location = new System.Drawing.Point(66, 27);
+            this.baslikLbl.Location = new System.Drawing.Point(135, 22);
             this.baslikLbl.Name = "baslikLbl";
             this.baslikLbl.Size = new System.Drawing.Size(187, 52);
             this.baslikLbl.TabIndex = 1;
